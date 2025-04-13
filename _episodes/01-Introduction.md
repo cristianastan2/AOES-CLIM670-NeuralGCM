@@ -71,7 +71,7 @@ objectives:
   ![image](https://github.com/user-attachments/assets/ebb11382-a035-4fbe-8ffb-53e7072ecebe)
   **a**: Overall model structure, showing how forcings F<sub>t</sub>, noise z<sub>t</sub> (for stochastic models) and inputs y<sub>t</sub> are encoded into the model state x<sub>t</sub>. The model state is fed into the dynamical core, and alongside forcings and noise into the learned physics module. This produces tendencies (rates of change) used by an implicit–explicit ordinary differential equation (ODE) solver to advance the state in time. The new model state x<sub>t</sub>+1 can then be fed back into another time step, or decoded into model predictions. **b**: The learned physics module, which feeds data for individual columns of the atmosphere into a neural network used to produce physics tendencies in that vertical column. Figure 1 in [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
 
-- Is available at three horizontal resolutions with grid spacing of 2.8<sup>0</sup>, 1.4 <sup>0</sup>, and 0.7<sup>0</sup>.
+- Is available at three horizontal resolutions with grid spacing of 2.8<sup>o</sup>, 1.4 <sup>o</sup>, and 0.7<sup>o</sup>.
 - The inputs:
      * prognostic variables in the atmospheric column: total incident solar radiation, sea-ice concentration and SST
      * horizontal gradients of prognostic variables
@@ -85,6 +85,16 @@ Vertical profiles of the extratropical intensity (averaged between latitude 30°
 #### Precipitation minus evaporation
 ![image](https://github.com/user-attachments/assets/0a39ecb3-903d-48c7-88c9-372f8dab8845)
 (a) Tropical (latitudes −20° to 20°) precipitation minus evaporation (P minus E) rate distribution, (b) Extratropical (latitudes 30° to 70° in both hemispheres) P minus E, (c) mean P minus E for 2020 ERA514 and (d) NeuralGCM-0.7° (calculated from the third day of forecasts and averaged over all forecasts initialized in 2020), (e) the bias between NeuralGCM-0.7° and ERA5, (f-g) Snapshot of daily precipitation minus evaporation for 2020-01-04 for (f) NeuralGCM-0.7° (forecast initialized on 2020-01-02) and (g) ERA5.
+
+#### Tropical Cyclone densities and annual regional counts
+![image](https://github.com/user-attachments/assets/9b62810d-8a63-42db-a738-aa016992f8ea)
+(a) Tropical Cyclone (TC) density from ERA514 data spanning 1987–2020. (b) TC density from NeuralGCM-1.4° for 2020, generated using 34 different initial conditions all initialized in 2019. (c) Box plot depicting the annual number of TCs across different regions, based on ERA5 data (1987–2020), NeuralGCM-1.4° for 2020 (34 initial conditions), and orange markers show ERA5 for 2020. In the box plots, the red line represents the median; the box delineates the first to third quartiles; the whiskers extend to 1.5 times the interquartile range (Q1 − 1.5IQR and Q3 + 1.5IQR), and outliers are shown as individual dots. Each year is defined from January 19th to January 17th of the following year, aligning with data availability from X-SHiELD ([eXperimental System for High-resolution prediction on Earth-to-Local Domains developed at the Geophysical Fluid Dynamics Laboratory](https://doi.org/10.1029/2022GL099796)). For NeuralGCM simulations, the 3 initial conditions starting in January 2019 exclude data for January 17th, 2021, as these runs spanned only two years.
+
+### Simulation of climate with NeuralGCM
+
+
+
+
 
 
 
