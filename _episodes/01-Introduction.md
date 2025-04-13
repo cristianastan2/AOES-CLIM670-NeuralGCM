@@ -53,7 +53,7 @@ objectives:
         
       + [Lang et al., 2024](https://arxiv.org/abs/2406.01465): ECMWF AIFS
       
-      + [https://www.nature.com/articles/s41586-024-07744-y] (Kochkov et al. 2024): NeuralGCM    
+      + [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y): NeuralGCM    
 
 ### NeuralGCM
 - The material presented here is adopted from [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
