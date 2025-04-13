@@ -90,7 +90,6 @@ Vertical profiles of the extratropical intensity (averaged between latitude 30°
 ![image](https://github.com/user-attachments/assets/9b62810d-8a63-42db-a738-aa016992f8ea)
 (a) Tropical Cyclone (TC) density from ERA514 data spanning 1987–2020. (b) TC density from NeuralGCM-1.4° for 2020, generated using 34 different initial conditions all initialized in 2019. (c) Box plot depicting the annual number of TCs across different regions, based on ERA5 data (1987–2020), NeuralGCM-1.4° for 2020 (34 initial conditions), and orange markers show ERA5 for 2020. In the box plots, the red line represents the median; the box delineates the first to third quartiles; the whiskers extend to 1.5 times the interquartile range (Q1 − 1.5IQR and Q3 + 1.5IQR), and outliers are shown as individual dots. Each year is defined from January 19th to January 17th of the following year, aligning with data availability from X-SHiELD ([eXperimental System for High-resolution prediction on Earth-to-Local Domains developed at the Geophysical Fluid Dynamics Laboratory](https://doi.org/10.1029/2022GL099796)). For NeuralGCM simulations, the 3 initial conditions starting in January 2019 exclude data for January 17th, 2021, as these runs spanned only two years.
 
-### Simulation of climate with NeuralGCM
 
 
 
