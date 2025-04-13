@@ -1,5 +1,5 @@
 ---
-title: "Neural GCM"
+title: "NeuralGCM"
 teaching: 0
 exercises: 0
 questions:
