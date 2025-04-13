@@ -78,7 +78,14 @@ objectives:
      * all inpputs are standardized to have zero mean and unit variance
      * training data: ERA5
 ### NeuralGCM Results
-#### Geostrophic balance:
+#### Geostrophic balance
 ![image](https://github.com/user-attachments/assets/90bcfd63-1105-4235-bef0-eef779218ba7)
+Vertical profiles of the extratropical intensity (averaged between latitude 30°–70° in both hemispheres) and over all forecasts initialized in 2020 of (a,d,g) geostrophic wind, (b,e,h) ageostrophic wind and (c,f,i) the ratio of the intensity of ageostrophic wind over geostrophic wind for ERA5 (black continuous line in all panels), (a,b,c) NeuralGCM-0.7°, (d,e,f) GraphCast and (g,h,i) ECMWF-HRES at lead times of 1 day, 5 days and 10 days. From [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
+
+#### Precipitation minus evaporation
+![image](https://github.com/user-attachments/assets/0a39ecb3-903d-48c7-88c9-372f8dab8845)
+(a) Tropical (latitudes −20° to 20°) precipitation minus evaporation (P minus E) rate distribution, (b) Extratropical (latitudes 30° to 70° in both hemispheres) P minus E, (c) mean P minus E for 2020 ERA514 and (d) NeuralGCM-0.7° (calculated from the third day of forecasts and averaged over all forecasts initialized in 2020), (e) the bias between NeuralGCM-0.7° and ERA5, (f-g) Snapshot of daily precipitation minus evaporation for 2020-01-04 for (f) NeuralGCM-0.7° (forecast initialized on 2020-01-02) and (g) ERA5.
+
+
 
 
