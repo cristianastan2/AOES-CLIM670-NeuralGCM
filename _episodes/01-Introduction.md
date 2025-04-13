@@ -59,9 +59,14 @@ objectives:
 - The material presented here is adopted from [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
 - Is a fully differentiable **hybrid** GCM of Earth's atmosphere.
 
-     - differentiable dynamical core for solving the discretized governing equations
-       
+     - differentiable dynamical core for solving the discretized governing equations:
+          + solves the dynamical equations of the atmosphere, describing large-scale fluid motion and thermodynamics under the influence of gravity and the Coriolis force.
+          + uses a horizontal pseudo-spectral discretization and vertical sigma coordinates
+          + seven prognostic variables: vorticity and divergence of horizontal wind, temperature, surface pressure, and three water species (specific humidity, and specific ice and liquid cloud water content)
+          + differentiable dynamical core is implemented in JAX, a library for high-performance code in Python that supports automatic differentiation. 
      - a learned physics module that parameterizes physical processes with a neural network
+          + predicts the effect of unresolved processes, such as cloud formation, radiative transport, precipitation and subgrid-scale dynamics, on the simulated fields using a neural network.
+          + uses the single-column approach of GCMs
  
   ![image](https://github.com/user-attachments/assets/ebb11382-a035-4fbe-8ffb-53e7072ecebe)
   **a**: Overall model structure, showing how forcings F<sub>t</sub>, noise z<sub>t</sub> (for stochastic models) and inputs y<sub>t</sub> are encoded into the model state x<sub>t</sub>. The model state is fed into the dynamical core, and alongside forcings and noise into the learned physics module. This produces tendencies (rates of change) used by an implicit–explicit ordinary differential equation (ODE) solver to advance the state in time. The new model state x<sub>t</sub>+1 can then be fed back into another time step, or decoded into model predictions. **b**: The learned physics module, which feeds data for individual columns of the atmosphere into a neural network used to produce physics tendencies in that vertical column. Figure 1 in [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
