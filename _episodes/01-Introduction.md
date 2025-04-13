@@ -71,4 +71,14 @@ objectives:
   ![image](https://github.com/user-attachments/assets/ebb11382-a035-4fbe-8ffb-53e7072ecebe)
   **a**: Overall model structure, showing how forcings F<sub>t</sub>, noise z<sub>t</sub> (for stochastic models) and inputs y<sub>t</sub> are encoded into the model state x<sub>t</sub>. The model state is fed into the dynamical core, and alongside forcings and noise into the learned physics module. This produces tendencies (rates of change) used by an implicit–explicit ordinary differential equation (ODE) solver to advance the state in time. The new model state x<sub>t</sub>+1 can then be fed back into another time step, or decoded into model predictions. **b**: The learned physics module, which feeds data for individual columns of the atmosphere into a neural network used to produce physics tendencies in that vertical column. Figure 1 in [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
 
-  
+- Is available at three horizontal resolutions with grid spacing of 2.8<sup>0</sup>, 1.4 <sup>0</sup>, and 0.7<sup>0</sup>.
+- The inputs:
+     * prognostic variables in the atmospheric column: total incident solar radiation, sea-ice concentration and SST
+     * horizontal gradients of prognostic variables
+     * all inpputs are standardized to have zero mean and unit variance
+     * training data: ERA5
+### NeuralGCM Results
+#### Geostrophic balance:
+![image](https://github.com/user-attachments/assets/90bcfd63-1105-4235-bef0-eef779218ba7)
+
+
