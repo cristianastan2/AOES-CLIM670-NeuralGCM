@@ -11,7 +11,7 @@ objectives:
 ### What are artificial neural networks?
 - Artificial neural networks (NNs) are mathematical models built to reflect the behavior of humain brain.
 - If a sufficient amount of data are available, NNs can be trained to describe the evolution of non-linear processes.
-- Due to the fundamentally application agnostic character, no complete understanding of the underlying process is necessary.
+- Due to the fundamentally application-agnostic character, no complete understanding of the underlying process is necessary.
 - NNs have been used to:
     * post-process data from weather forecast models to optimise predictions:
       
@@ -57,4 +57,12 @@ objectives:
 
 ### NeuralGCM
 - The material presented here is adopted from [Kochkov et al. 2024](https://www.nature.com/articles/s41586-024-07744-y)
+- Is a fully differentiable **hybrid** GCM of Earth's atmosphere.
+
+     - differentiable dynamical core for solving the discretized governing equations
+       
+     - a learned physics module that parameterizes physical processes with a neural network
+ 
+  ![image](https://github.com/user-attachments/assets/ebb11382-a035-4fbe-8ffb-53e7072ecebe)
+
   
